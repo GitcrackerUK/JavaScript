@@ -128,6 +128,48 @@
 // var home;
 // home = 1
 // home = "var"
+// window.personalbar.visible = false
+// name = null
+// // console.log( home || "string"); //var
+// console.log(window);
+// var wd =(window.screen.availWidth);
+// var hg =(window.screen.availHeight);
+// var pb = false || 4456;
+// console.log(wd);
+// console.log(hg);
+// console.log(pb);
+//
+// function divided(x,y){
+//     var x;
+//     var y;
+//     console.log(x/y);
+// }
+// divided(hg,wd);
+// divided(wd,hg);
+// console.log(window.personalbar.visible);
 
 
-// console.log( home || "string"); //var
+
+var person = new Object();
+
+person["firstName"] = "Tony";
+person["lastName"] = "Smith";
+
+var firstNameProperty = "firstName";
+
+console.log(person.firstName);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
