@@ -62,13 +62,23 @@
 //
 
 
-var a;
-
-// goes out to internet and looks for a value
-
-if(a){
-    console.log("Something is there!!");
-}
-else {
-    console.log(" 'a' is undefined");
-}
+// var a = null;
+// var a = undefined;
+// var a = false;
+// var a = true;
+// var a = "";
+// if(a){
+//     console.log("Something is there!!");
+// }
+// else {
+//     console.log(" 'a' is undefined");
+// }
+//
+//
+// // undefined === null === false
+//
+//
+// console.log(undefined == null); //true
+// console.log(null == false);//false
+// console.log(undefined == false);//false
+// console.log(0 == false);//true
