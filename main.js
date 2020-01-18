@@ -82,3 +82,52 @@
 // console.log(null == false);//false
 // console.log(undefined == false);//false
 // console.log(0 == false);//true
+
+// console.log(Boolean(0)); //false
+// console.log(Boolean(111)); //true
+//
+// var a;
+// a = 0;
+// if (a || a === 0) {
+//     console.log("Something is there!");
+// }
+
+
+
+
+
+
+//
+// function greet(name){
+//     console.log("Hello " + name);
+// }
+// // var name = "Tony"
+//
+// greet();
+// greet(name);
+
+// Operator "or" prioritaize value "true" and all valuses which can be coerced to true like "1"
+// list of outputs from || "or".
+// console.log(true || false); //true
+// console.log(false || "hi"); // "hi"
+// console.log("hello" || "hi"); // "hello"
+// console.log(undefined || "hi"); // "hi"
+// console.log(null || "hi"); // "hi"
+//
+
+// function greet(name){
+//     name = name || "<Your name here!!>";
+//     console.log("Hello " + name);
+//
+// }
+//
+//
+// greet("Tony");
+// greet();
+//
+// var home;
+// home = 1
+// home = "var"
+
+
+// console.log( home || "string"); //var
