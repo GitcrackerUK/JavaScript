@@ -149,27 +149,56 @@
 // console.log(window.personalbar.visible);
 
 
-
+//
+// var person = new Object();
+//
+// person["firstName"] = "Tony";
+// person["lastName"] = "Smith";
+//
+// var firstNameProperty = "firstName";
+//
+// console.log(person.firstName);
+//
+// var person = {}; // creating new object
+// console.log(person);
+//
+// person = {
+//     firstname: "Tony",
+//     lastname: "Smith"
+// };
+//
+//
+// person.address="Kings Road";
+//
+// console.log(person);
 var person = new Object();
-
-person["firstName"] = "Tony";
-person["lastName"] = "Smith";
-
-var firstNameProperty = "firstName";
-
+person["firstName"]="Tony";
+person["secondName"]="Smith";
+var firstNameProperty = "firstName"
+console.log(person);
 console.log(person.firstName);
 
 
+var employee = new Object();
+employee["firstName"]="Pawel";
+employee["secondName"]="Chryc";
+employee["Gender"]="male";
+employee["Height"]="184";
+employee["Weight"]="90";
+employee["Nationality"]="Polish";
+employee["Hair"]="Brown";
+employee["Hair"]="Brown";
 
+var heightValue ="Height";
 
+console.log(employee[heightValue]);
 
+var weighValue = "Weight";
 
+console.log(employee[weighValue]);
 
+console.log(employee.Hair);
 
+employee.age="34";
 
-
-
-
-
-
-//
+console.log(employee.age);
