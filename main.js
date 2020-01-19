@@ -202,3 +202,42 @@ console.log(employee.Hair);
 employee.age="34";
 
 console.log(employee.age);
+
+console.log(employee);
+
+employee.workType = "Accountant"
+
+console.log(employee);
+
+delete employee.workType;
+
+employee["Work Type"]="Accountant";
+
+console.log(employee);
+
+employee.address
+console.log(employee);
+
+employee["Work Expirience"]="10 years";
+
+var work = {};
+
+
+
+console.log(work);
+
+
+work = { type:"heavy lifting",
+        location:"Rading",
+        address:{
+            street:"kings",
+            town:"Reding",
+            postCode:"rg1 1rg",
+        }
+}
+console.log(work);
+
+
+work.type["Human Resoces"];
+
+console.log(work);
