@@ -355,8 +355,36 @@
 //
 // console.log(greet);
 //
-// var anonymousGreet = function(){
-//     console.log("Hello!");
-// }
+
+
+
+greet();
+
+
+//FUNCTION STATMENT
+function greet(){
+    console.log("hi");
+}
+//FUNCTION EXPRESSION
+var anonymousGreet = function(){
+    console.log("Hello!");
+}
+
+anonymousGreet();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //
-// anonymousGreet();
