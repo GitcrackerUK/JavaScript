@@ -269,45 +269,100 @@
 // person.lastname.surname = "Smith";
 // person.lastname.mothersname = "Jones";
 //
+//
+// var person = {
+//     firstname: "",
+//     lastname: "",
+//     age: "",
+//     address: {
+//         street: "",
+//         town: "",
+//     }
+// };
+//
+//
+// var Tony = {
+//     firstname: "Tony",
+//     lastname: "Smith",
+//     age: "34",
+//     address: {
+//         street: "Main Street",
+//         town: "Luton",
+//     }
+// };
+// console.log(person);
+//
+// function greet(person) {
+//     console.log("Hi " + person.firstname + ".");
+// }
+//
+// greet(Tony);
+//
+// greet({
+//     firstname: "Marry",
+//     lastname: "Doe"
+// });
+// Tony.address2 = {
+//     street: "Broad Street",
+//     Town: "London"
+// }
+//
+// function address(person) {
+//     console.log("Your address is:\n" + person.address.street + "\n" + person.address.town);
+// }
+// address(Tony);
+//
+// var greet = "Hello!";
+// var greet = "Holla";
+//
+// // console.log(greet);
+//
+// var english = {};
+// var spanish = {};
+//
+// english.greet = "Hello!"
+// spanish.greet = "Hola!"
+//
+// console.log(english);
+// console.log(spanish.greet);
+/
 
-var person = {
-    firstname: "",
-    lastname: "",
-    age: "",
-    address: {
-        street: "",
-        town: "",
-    }
-};
 
 
-var Tony = {
-    firstname: "Tony",
-    lastname: "Smith",
-    age: "34",
-    address: {
-        street: "Main Street",
-        town: "Luton",
-    }
-};
-console.log(person);
 
-function greet(person) {
-    console.log("Hi " + person.firstname + ".");
-}
 
-greet(Tony);
 
-greet({
-    firstname: "Marry",
-    lastname: "Doe"
-});
-Tony.address2 = {
-    street: "Broad Street",
-    Town: "London"
-}
 
-function address(person) {
-    console.log("Your address is:\n" + person.address.street + "\n" + person.address.town);
-}
-address(Tony);
+
+
+
+
+
+
+
+
+
+
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 02e3cb8d1b00220ba9d155b1cea0a8d3252b6cdb
+
+
+
+
+
+<<<<<<< HEAD
+
+
+
+
+
+
+>>>>>>> 02e3cb8d1b00220ba9d155b1cea0a8d3252b6cdb
+=======
+>>>>>>> 02e3cb8d1b00220ba9d155b1cea0a8d3252b6cdb
+//
