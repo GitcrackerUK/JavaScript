@@ -171,73 +171,143 @@
 // person.address="Kings Road";
 //
 // console.log(person);
-var person = new Object();
-person["firstName"]="Tony";
-person["secondName"]="Smith";
-var firstNameProperty = "firstName"
+// var person = new Object();
+// person["firstName"]="Tony";
+// person["secondName"]="Smith";
+// var firstNameProperty = "firstName"
+// console.log(person);
+// console.log(person.firstName);
+//
+//
+// var employee = new Object();
+// employee["firstName"]="Pawel";
+// employee["secondName"]="Chryc";
+// employee["Gender"]="male";
+// employee["Height"]="184";
+// employee["Weight"]="90";
+// employee["Nationality"]="Polish";
+// employee["Hair"]="Brown";
+// employee["Hair"]="Brown";
+//
+// var heightValue ="Height";
+//
+// console.log(employee[heightValue]);
+//
+// var weighValue = "Weight";
+//
+// console.log(employee[weighValue]);
+//
+// console.log(employee.Hair);
+//
+// employee.age="34";
+//
+// console.log(employee.age);
+//
+// console.log(employee);
+//
+// employee.workType = "Accountant"
+//
+// console.log(employee);
+//
+// delete employee.workType;
+//
+// employee["Work Type"]="Accountant";
+//
+// console.log(employee);
+//
+// employee.address
+// console.log(employee);
+//
+// employee["Work Expirience"]="10 years";
+//
+// var work = {};
+//
+//
+//
+// console.log(work);
+//
+//
+// work = { type:"heavy lifting",
+//         location:"Rading",
+//         address:{
+//             street:"kings",
+//             town:"Reding",
+//             postCode:"rg1 1rg",
+//         }
+// }
+// console.log(work);
+//
+//
+// work.type["Human Resoces"];
+//
+// console.log(work);
+//
+// //1.  []
+//
+// var person = new Object();
+//
+// person["firstname"] = "Tony";
+// person["lastname"] ="Smith";
+//
+// var firstNameProperty = "firstname";
+//
+// var objPerson = person;
+// var objPersonName = person.firstname;
+//
+// console.log(person);
+// console.log(person[firstNameProperty]); // [] extracts value from varible
+// console.log(person.firstname);
+// console.log(objPerson);
+// console.log(objPersonName);
+// console.log(person.firstname);
+// console.log(person.firstname);
+// console.log(person.lastname);
+//
+//
+// // 2   .
+// person.lastname = new Object();
+// person.lastname.surname = "Smith";
+// person.lastname.mothersname = "Jones";
+//
+
+var person = {
+    firstname: "",
+    lastname: "",
+    age: "",
+    address: {
+        street: "",
+        town: "",
+    }
+};
+
+
+var Tony = {
+    firstname: "Tony",
+    lastname: "Smith",
+    age: "34",
+    address: {
+        street: "Main Street",
+        town: "Luton",
+    }
+};
 console.log(person);
-console.log(person.firstName);
 
-
-var employee = new Object();
-employee["firstName"]="Pawel";
-employee["secondName"]="Chryc";
-employee["Gender"]="male";
-employee["Height"]="184";
-employee["Weight"]="90";
-employee["Nationality"]="Polish";
-employee["Hair"]="Brown";
-employee["Hair"]="Brown";
-
-var heightValue ="Height";
-
-console.log(employee[heightValue]);
-
-var weighValue = "Weight";
-
-console.log(employee[weighValue]);
-
-console.log(employee.Hair);
-
-employee.age="34";
-
-console.log(employee.age);
-
-console.log(employee);
-
-employee.workType = "Accountant"
-
-console.log(employee);
-
-delete employee.workType;
-
-employee["Work Type"]="Accountant";
-
-console.log(employee);
-
-employee.address
-console.log(employee);
-
-employee["Work Expirience"]="10 years";
-
-var work = {};
-
-
-
-console.log(work);
-
-
-work = { type:"heavy lifting",
-        location:"Rading",
-        address:{
-            street:"kings",
-            town:"Reding",
-            postCode:"rg1 1rg",
-        }
+function greet(person) {
+    console.log("Hi " + person.firstname + ".");
 }
-console.log(work);
 
+greet(Tony);
 
-work.type["Human Resoces"];
+greet({
+    firstname: "Marry",
+    lastname: "Doe"
+});
+Tony.address2 = {
+    street: "Broad Street",
+    Town: "London"
+}
 
-console.log(work);
+function address(person) {
+    console.log("Your address is:\n" + person.address.street + "\n" + person.address.town);
+}
+address(Tony);
