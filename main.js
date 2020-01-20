@@ -358,23 +358,39 @@
 
 
 
-greet();
+// greet();
+//
+//
+// //FUNCTION STATMENT
+// function greet(){
+//     console.log("hi");
+// }
+// //FUNCTION EXPRESSION
+// var anonymousGreet = function(){
+//     console.log("Hello!");
+// }
+//
+// anonymousGreet();
+//
 
-
-//FUNCTION STATMENT
-function greet(){
-    console.log("hi");
+function log(a){
+    console.log(a);
 }
-//FUNCTION EXPRESSION
-var anonymousGreet = function(){
-    console.log("Hello!");
-}
+log(3);
+log("Hello");
 
-anonymousGreet();
+log({
+    greeting: "Hi"
+});
+
+function logrun(a){
+    a();
+};
 
 
-
-
+logrun(function(){
+    console.log('Runned function in a function by setting a(); in first function and console.log(); in second/this' );
+});
 
 
 
