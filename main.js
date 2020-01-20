@@ -326,16 +326,37 @@
 // console.log(english);
 // console.log(spanish.greet);
 
+//
+// var objectLiteral = {
+//     firstname:"Mary",
+//     secondname:"Magdalena",
+//     isAProgrammer:true
+// }
+//
+//
+// console.log(JSON.stringify(objectLiteral));
+//
+// var jsonValue = JSON.parse('{"firstname":"marry","secondName":"Smith"}');
+//
+// console.log(jsonValue);
 
-var objectLiteral = {
-    firstname:"Mary",
-    secondname:"Magdalena",
-    isAProgrammer:true
-}
-
-
-console.log(JSON.stringify(objectLiteral));
-
-var jsonValue = JSON.parse('{"firstname":"marry","secondName":"Smith"}');
-
-console.log(jsonValue);
+// greet();
+//
+// function greet(){
+//     console.log("hi");
+// }
+//
+// greet.language ="English";
+//
+// greet();
+// console.log(greet.language);
+// var greetLanguage = greet.language;
+// console.log(greetLanguage);
+//
+// console.log(greet);
+//
+// var anonymousGreet = function(){
+//     console.log("Hello!");
+// }
+//
+// anonymousGreet();
