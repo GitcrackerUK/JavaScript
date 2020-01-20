@@ -373,27 +373,72 @@
 // anonymousGreet();
 //
 
-function log(a){
-    console.log(a);
+// function log(a){
+//     console.log(a);
+// }
+// log(3);
+// log("Hello");
+//
+// log({
+//     greeting: "Hi"
+// });
+//
+// function logrun(a){
+//     a();
+// };
+//
+//
+// logrun(function(){
+//     console.log('Runned function in a function by setting a(); in first function and console.log(); in second/this' );
+// });
+//
+//
+
+// by valuses
+var a = 3;
+var b = a;
+
+
+var a = 5;
+
+console.log(a);
+console.log(b);
+
+// by reference (all objects)
+
+var c = {
+    greeting: "Hello"
+};
+var d;
+
+d = c;
+
+console.log(c);
+console.log(d);
+
+c.greeting = "Hi there"; // mutate
+
+console.log(c);
+console.log(d);
+
+// by reference (even as parameters)
+
+function changeGreetings(obj){
+    obj.greeting = "Holla";
 }
-log(3);
-log("Hello");
 
-log({
-    greeting: "Hi"
-});
+changeGreetings(d);
 
-function logrun(a){
-    a();
+console.log(c);
+console.log(d);
+
+// equals operator sets up new memory space (new address)
+c = {
+    greeting:'Bubble'
 };
 
-
-logrun(function(){
-    console.log('Runned function in a function by setting a(); in first function and console.log(); in second/this' );
-});
-
-
-
+console.log(c);
+console.log(d);
 
 
 
