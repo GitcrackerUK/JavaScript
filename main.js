@@ -330,4 +330,12 @@
 var objectLiteral = {
     firstname:"Mary",
     secondname:"Magdalena",
+    isAProgrammer:true
 }
+
+
+console.log(JSON.stringify(objectLiteral));
+
+var jsonValue = JSON.parse('{"firstname":"marry","secondName":"Smith"}');
+
+console.log(jsonValue);
