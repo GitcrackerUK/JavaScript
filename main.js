@@ -325,44 +325,9 @@
 //
 // console.log(english);
 // console.log(spanish.greet);
-/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 02e3cb8d1b00220ba9d155b1cea0a8d3252b6cdb
-
-
-
-
-
-<<<<<<< HEAD
-
-
-
-
-
-
->>>>>>> 02e3cb8d1b00220ba9d155b1cea0a8d3252b6cdb
-=======
->>>>>>> 02e3cb8d1b00220ba9d155b1cea0a8d3252b6cdb
-//
+var objectLiteral = {
+    firstname:"Mary",
+    secondname:"Magdalena",
+}
