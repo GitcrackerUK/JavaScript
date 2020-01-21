@@ -493,22 +493,61 @@
 //
 // // console.log(foo);
 //
-var boo = [
-    1,
-    5,
-    22,
-    function(a, b, name) {
-        console.log(name, a + b);
-    },
-    function(a, b, c, name) {
-        console.log(name, (a + b) / c);
-    },
-    {
-        name: 'Pawel',
-        div: 'Result from divaiding is:',
-        value: 'This is result of adding two ints:'
-    }
+// 
+// function greet(firstname, lastname, language){
+//     firstname = firstname || "John"
+//     lastname = lastname || "Smith"
+//     language = language || "English"
+//     if (arguments.lenght === 0){
+//         console.log('Missing parameters!')
+//         console.log('---------------')
+//     }
+//     console.log(firstname);
+//     console.log(lastname);
+//     console.log(language);
+//     console.log(arguments);
+//     console.log('Argument 0 is: '+arguments[0]);
+//     console.log(firstname+" "+lastname+" "+language);
+//     console.log("-----------");
+// }
+// function greetWithoutParameters(firstname, lastname, language){
+//
+//     if (arguments.length === 0){
+//         console.log('Missing parameters!');
+//         console.log('---------------');
+//         return;
+//     }
+//     else{
+//         console.log(firstname);
+//         console.log(lastname);
+//         console.log(language);
+//         // console.log(arguments);
+//         console.log(firstname+" "+lastname+" "+language);
+//         console.log("-----------");
+//     }
+//
+// }
+//
+//
+//
+// greet();
+// greet("Pawel","Siwek","Polish");
+// greetWithoutParameters("Pawel","Siwek","Polish");
+// greetWithoutParameters();
+//
 
-];
-boo[3](boo[0], boo[2], boo[5].value);
-boo[4](boo[1], boo[2], boo[2], boo[5].div);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
