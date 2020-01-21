@@ -1,4 +1,3 @@
-
 // var a="hi";
 // if (a){
 //
@@ -448,12 +447,68 @@
 //
 // c.log();
 //
-
-
-
-
-
-
-
-
 //
+//
+// var arr = [1, 2, 3];
+//
+//
+// var a = arr[0];
+// var b = arr[1];
+// var c = arr[2];
+//
+// console.log(a);
+// console.log(b);
+// console.log(c);
+//
+// var arr = [
+//     1,
+//     false,
+//     {
+//         name: "Tony",
+//         address: "Reading"
+//     },
+//     function(name) {
+//         var greeting = 'Hello ';
+//         console.log(greeting + name);
+//     }
+//
+// ];
+//
+// console.log(arr);
+// arr[3](arr[2].name);
+//
+//
+// var foo = [
+//     1,
+//     2,
+//     {
+//         name: "Hello Moto"
+//     },
+//     function(name) {
+//         console.log(name);
+//     }
+// ];
+//
+// foo[3](foo[2].name);
+//
+// // console.log(foo);
+//
+var boo = [
+    1,
+    5,
+    22,
+    function(a, b, name) {
+        console.log(name, a + b);
+    },
+    function(a, b, c, name) {
+        console.log(name, (a + b) / c);
+    },
+    {
+        name: 'Pawel',
+        div: 'Result from divaiding is:',
+        value: 'This is result of adding two ints:'
+    }
+
+];
+boo[3](boo[0], boo[2], boo[5].value);
+boo[4](boo[1], boo[2], boo[2], boo[5].div);
