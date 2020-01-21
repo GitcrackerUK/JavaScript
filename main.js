@@ -568,7 +568,7 @@
 
 // Syntax parser is part of Javascript engine.
 
-// 
+//
 //
 //
 // function getPerson1() {
@@ -590,6 +590,33 @@
 //
 // console.log(getPerson());
 //
+
+var firstname,
+
+
+
+    //some comments
+    lastname,
+    // Another comment
+    language;
+
+
+
+var person = {
+    // Object Literal comments
+    //Gap
+
+
+    //Gap
+    firstname: "John",
+    // JavaScript doesn't care about white spaces
+    lastname: 'Smith'
+}
+
+console.log(person);
+console.log(person.firstname);
+console.log(firstname);
+
 
 
 
