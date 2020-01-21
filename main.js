@@ -590,34 +590,73 @@
 //
 // console.log(getPerson());
 //
+//
+// var firstname,
+//
+//
+//
+//     //some comments
+//     lastname,
+//     // Another comment
+//     language;
+//
+//
+//
+// var person = {
+//     // Object Literal comments
+//     //Gap
+//
+//
+//     //Gap
+//     firstname: "John",
+//     // JavaScript doesn't care about white spaces
+//     lastname: 'Smith'
+// }
+//
+// console.log(person);
+// console.log(person.firstname);
+// console.log(firstname);
 
-var firstname,
 
 
-
-    //some comments
-    lastname,
-    // Another comment
-    language;
-
-
-
-var person = {
-    // Object Literal comments
-    //Gap
-
-
-    //Gap
-    firstname: "John",
-    // JavaScript doesn't care about white spaces
-    lastname: 'Smith'
-}
-
-console.log(person);
-console.log(person.firstname);
-console.log(firstname);
-
-
+//Function Statment
+// function greet(name) {
+//     console.log('Hello ' + name);
+// }
+// greet('Oskar');
+//
+// // Function Expression
+// var FunctionExpression = function(name) {
+//     console.log('Hello ' + name);
+// };
+//
+// FunctionExpression('Oskar');
+//
+// // Useing an Immediately Invoke Function Expression (IIFE)
+//
+// var greety = function(name) {
+//     name = name || 'Oskar'
+//     console.log('Hello ' + name);
+// }('Edward'); // () makes Function Expression an IIFE
+// var name = 'Victor'
+//
+// var greety = function(name) {
+//     name = name || 'Oskar'
+//     console.log('Hello ' + name);
+// };
+//
+// greety('Victor');
+//
+// {
+//     name: 'John'
+// }
+//
+// // In this way function sits in memeory without corsing errors and is runned on the go.
+// var firstname = 'Malcolm';
+// (function(name) {
+//     var greeting = 'Hello from inside IIFE';
+//     console.log(greeting + ' ' + name);
+// }(firstname));
 
 
 
