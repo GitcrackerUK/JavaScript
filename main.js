@@ -493,7 +493,7 @@
 //
 // // console.log(foo);
 //
-// 
+//
 // function greet(firstname, lastname, language){
 //     firstname = firstname || "John"
 //     lastname = lastname || "Smith"
@@ -535,13 +535,35 @@
 // greetWithoutParameters("Pawel","Siwek","Polish");
 // greetWithoutParameters();
 //
-
-
-
-
-
-
-
+//
+// function greet(firstname, lastname, language){
+//     language = language || 'eng';
+//
+//     if ( language === 'eng') {
+//         console.log('Hello ' + firstname +' '+ lastname);
+//         console.log('---------------------');
+//
+//     }
+//     if ( language === 'es' ) {
+//         console.log('Holla ' + firstname +' '+ lastname);
+//         console.log('---------------------');
+//     }
+// }
+//
+// greet('John','Smith','eng');
+// greet('John','Smith');
+// greet('Hoolio','Rodriguez','es');
+//
+//
+// function greetEnglish(firstname, lastname){
+//     greet(firstname, lastname, 'eng');
+// }
+// function greetSpanish(firstname, lastname){
+//     greet(firstname, lastname, 'es');
+// }
+//
+// greetEnglish("John","Smith");
+// greetSpanish("Amigo","Julio");
 
 
 
