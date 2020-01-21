@@ -566,6 +566,32 @@
 // greetSpanish("Amigo","Julio");
 
 
+// Syntax parser is part of Javascript engine.
+
+// 
+//
+//
+// function getPerson1() {
+//     return //SYNTAX PARSER adds semilocon but shouldn't
+//     {
+//         firstname: 'Tony'
+//     }
+// }
+// console.log(getPerson1());
+//
+//
+//
+//
+// function getPerson() {
+//     return {
+//         firstname: 'Tony'
+//     }
+// }
+//
+// console.log(getPerson());
+//
+
+
 
 
 
