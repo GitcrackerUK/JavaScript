@@ -658,10 +658,16 @@
 //     console.log(greeting + ' ' + name);
 // }(firstname));
 
-
-
-
-
-
-
+// 
+// (function(global, name) {
+//     global.greeting = 'Hello from inside IIFE !! ';
+//     console.log(greeting + ' ' + name);
+// }(window,'Malcolm'));
 //
+// console.log(this);
+//
+// this.carMake = 'Audi'
+//
+//
+//
+// //
