@@ -753,27 +753,27 @@
 // arrF[1];
 // arrF[2];
 //
-
-
-function makeGreeting(language){
-
-    return function(first,last){
-        if( language === 'en'){
-            console.log('Hello '+ first +' '+ last);
-        }
-        if( language === 'es'){
-            console.log('Holla '+ first +' '+ last);
-        }
-    }
-}
-
-var langEn = makeGreeting('en');
-var langEs = makeGreeting('es');
-
-langEn('John','Smith');
-langEs('Julio','Rodrigues');
-
-
+//
+//
+// function makeGreeting(language){
+//
+//     return function(first,last){
+//         if( language === 'en'){
+//             console.log('Hello '+ first +' '+ last);
+//         }
+//         if( language === 'es'){
+//             console.log('Holla '+ first +' '+ last);
+//         }
+//     }
+// }
+//
+// var langEn = makeGreeting('en');
+// var langEs = makeGreeting('es');
+//
+// langEn('John','Smith');
+// langEs('Julio','Rodrigues');
+//
+//
 
 
 
