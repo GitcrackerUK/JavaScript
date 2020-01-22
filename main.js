@@ -658,7 +658,7 @@
 //     console.log(greeting + ' ' + name);
 // }(firstname));
 
-// 
+//
 // (function(global, name) {
 //     global.greeting = 'Hello from inside IIFE !! ';
 //     console.log(greeting + ' ' + name);
@@ -667,7 +667,121 @@
 // console.log(this);
 //
 // this.carMake = 'Audi'
+
+// function greet(whattosay) {
+//
+//     return function(name) {
+//         console.log(whattosay + ' ' + name);
+//     }
+//
+// }
+// greet('Hi')('Tony');
 //
 //
 //
-// //
+// var sayHi = greet('Hi');
+//
+// sayHi('Tony');
+// function bildFunctions(){
+//
+//     var arr= [];
+//     for (var i = 0; i < 3; i++);
+// };
+//
+//
+// function makeAdder(x) {
+//   return function(y) {
+//     return x + y;
+//   };
+// }
+//
+// console.log(makeAdder(5)(7));
+//
+// var add5 = makeAdder(5);
+// var add15 = makeAdder(15);
+// console.log(add5(5));
+// console.log(add15(5));
+//
+// var add55 = add5(5);
+//
+// console.log(add55 + 3);
+//
+// function builderFunction(){
+//
+//     var arr = [];
+//
+//     for (var i = 0;i < 3; i++){
+//         arr.push(i)
+//     }
+//     return arr;
+// }
+//
+// console.log(builderFunction());
+//---------------------------------------------
+//
+// function builderFunction1(){
+//
+//     var arr = [];
+//
+//     for (var i = 0;i < 3; i++){
+//         arr.push( function(){
+//             console.log(i);
+//         });
+//     }
+//     return arr;
+// }
+// var arrF = builderFunction1();
+//
+// arrF[0]();
+// arrF[1]();
+// arrF[2]();
+//
+// function builderFunction1(){
+//
+//     var arr = [];
+//
+//     for (var i = 0;i < 3; i++){
+//         arr.push( function(j){
+//             console.log(i);
+//         }(i)); // whit function trigger
+//     }
+//     return arr;
+// }
+// var arrF = builderFunction1();
+//
+// arrF[0];
+// arrF[1];
+// arrF[2];
+//
+
+
+function makeGreeting(language){
+
+    return function(first,last){
+        if( language === 'en'){
+            console.log('Hello '+ first +' '+ last);
+        }
+        if( language === 'es'){
+            console.log('Holla '+ first +' '+ last);
+        }
+    }
+}
+
+var langEn = makeGreeting('en');
+var langEs = makeGreeting('es');
+
+langEn('John','Smith');
+langEs('Julio','Rodrigues');
+
+
+
+
+
+
+
+
+
+
+
+
+///
