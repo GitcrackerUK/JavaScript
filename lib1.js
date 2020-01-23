@@ -1,1 +1,0 @@
-var libname = "lib1"

@@ -884,7 +884,7 @@
 //     return a * 5;
 // }
 //
-var arrX = [2, 3, 5, 6];
+// var arrX = [2, 3, 5, 6];
 //
 // var arrx2 = mapForEach(arrX, multi);
 // console.log(arrx2); // (4) [10, 15, 25, 30]
@@ -980,14 +980,11 @@ var arrX = [2, 3, 5, 6];
 //
 //
 
-var a = {};
-var b = function() {};
-var c = [];
+// var a = {};
+// var b = function() {};
+// var c = [];
 
 
-console.log(a.__proto__.__proto__);
-console.log(b.__proto__.__proto__);
-console.log(c.__proto__.__proto__);
 
 
 
