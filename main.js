@@ -787,80 +787,138 @@
 //
 // sayHiLater();
 //object
-var person = {
-    firstName: 'John',
-    lastName: 'Smith',
-    //function
-    getFullName: function() {
-        var fullname = this.firstName + ' ' + this.lastName;
-        // this. must be in a function(method) in a obj to point to this obj.
-        return fullname;
-    }
-}
+// var person = {
+//     firstName: 'John',
+//     lastName: 'Smith',
+//     //function
+//     getFullName: function() {
+//         var fullname = this.firstName + ' ' + this.lastName;
+//         // this. must be in a function(method) in a obj to point to this obj.
+//         return fullname;
+//     }
+// }
+// //
+// // 1 .bind()
+// //
+// var logName = function(lang1, lang2) {
+//     console.log('logged:' + this.getFullName()); // this. points global obj
+// }
+// var logPersonName = logName.bind(person); // .bind(person) points 'this.' to 'person' object.
+// logPersonName();
 //
-// 1 .bind()
+// // 2 .bind()
+// var logName = function(lang1, lang2) {
+//     console.log('----------------')
+//     console.log('logged:' + this.getFullName()); // this. points global obj
+//     console.log('Arguments: '+ lang1 +' '+ lang2)
+// }.bind(person); // .bind(person) points 'this.' to 'person' object.
+// logName('English','Spanish');
 //
-var logName = function(lang1, lang2) {
-    console.log('logged:' + this.getFullName()); // this. points global obj
-}
-var logPersonName = logName.bind(person); // .bind(person) points 'this.' to 'person' object.
-logPersonName();
+//
+//
+// //3 .bind()  'Currying'
+// function multi(a,b){
+//     return a*b;
+// }
+// var multiByTwo = multi.bind(this,2); // .bind(this) sets pernament for first argument in copy of a function stored in 'multiByTwo'.
+// var multiBy = multi.bind(this,2,3); // .bind(this) sets pernament for first and second argument in copy of a function stored in 'multiBy'.
+//
+// console.log(multiByTwo(4));
+// console.log(multiBy());
+//
+// //
+// //.call()
+// //
+//
+// var logName = function(lang1, lang2) {
+//     console.log('----------------')
+//     console.log('logged:' + this.getFullName()); // this. points global obj
+//     console.log('Arguments: '+ lang1 +' '+ lang2)
+// }
+//
+// logName.call(person,'English','Spanish'); // .call(person...) points 'this.' to 'person' object.
+//
+// //
+// // .apply()
+// //
+//
+// logName.apply(person,['Polish','German']); // .apply(person...) points 'this.' to 'person' object. Arguments need to be in [square] brackets!!!
+//
+//
+// (function(lang1, lang2) {
+//     console.log('----------------')
+//     console.log('logged:' + this.getFullName());
+//     console.log('Arguments: '+ lang1 +' '+ lang2)
+// }).call(person,'Russian','Lithuenian') // invokes immediately anonymous function pointing 'this' on obj. 'person' with two arguments.
+// var person2  = {
+//     firstName: 'Samantha',
+//     lastName: 'Jones'
+// }
+//
+// var fullNamep2 = person.getFullName.apply(person2); //Takes function 'getFullName' from person and point 'this' on person2 for 'firstName','lastName'.
+//
+// console.log(fullNamep2);
 
-// 2 .bind()
-var logName = function(lang1, lang2) {
-    console.log('----------------')
-    console.log('logged:' + this.getFullName()); // this. points global obj
-    console.log('Arguments: '+ lang1 +' '+ lang2)
-}.bind(person); // .bind(person) points 'this.' to 'person' object.
-logName('English','Spanish');
 
-
-
-//3 .bind()  'Currying'
-function multi(a,b){
-    return a*b;
-}
-var multiByTwo = multi.bind(this,2); // .bind(this) sets pernament for first argument in copy of a function stored in 'multiByTwo'.
-var multiBy = multi.bind(this,2,3); // .bind(this) sets pernament for first and second argument in copy of a function stored in 'multiBy'.
-
-console.log(multiByTwo(4));
-console.log(multiBy());
+// var arr1 = [1, 2, 3, ];
+// console.log(arr1);
+//
+// var arr2 = [];
+// for (var i = 0; i < arr1.length; i++) {
+//     arr2.push(arr1[i] * 2);
+// }
+// console.log(arr2);
 
 //
-//.call()
+// function mapForEach(arr, fn) {
+//     var newArr = [];
+//     for (var i = 0; i < arr.length; i++) {
+//         newArr.push(
+//             fn(arr[i])
+//         )
+//     };
+//     return newArr;
+// }
 //
-
-var logName = function(lang1, lang2) {
-    console.log('----------------')
-    console.log('logged:' + this.getFullName()); // this. points global obj
-    console.log('Arguments: '+ lang1 +' '+ lang2)
-}
-
-logName.call(person,'English','Spanish'); // .call(person...) points 'this.' to 'person' object.
-
+// function multi(a) {
+//     return a * 5;
+// }
 //
-// .apply()
+// var arrX = [2, 3, 5, 6];
 //
-
-logName.apply(person,['Polish','German']); // .apply(person...) points 'this.' to 'person' object. Arguments need to be in [square] brackets!!!
-
-
-(function(lang1, lang2) {
-    console.log('----------------')
-    console.log('logged:' + this.getFullName());
-    console.log('Arguments: '+ lang1 +' '+ lang2)
-}).call(person,'Russian','Lithuenian') // invokes immediately anonymous function pointing 'this' on obj. 'person' with two arguments.
-var person2  = {
-    firstName: 'Samantha',
-    lastName: 'Jones'
-}
-
-var fullNamep2 = person.getFullName.apply(person2); //Takes function 'getFullName' from person and point 'this' on person2 for 'firstName','lastName'.
-
-console.log(fullNamep2);
-
-
-
+// var arrx2 = mapForEach(arrX, multi);
+// console.log(arrx2); // (4) [10, 15, 25, 30]
+//
+// //
+// function greater(a) {
+//     return a > 20;
+// }
+//
+// var greaterThanResult = mapForEach(arrx2, greater);
+// console.log(greaterThanResult); //  (4) [false, false, true, true]
+//
+//
+// function greaterThanLimiter(limiter,item){
+//     return limiter <= item;
+// }
+//
+// var arr4 = mapForEach(arrx2,greaterThanLimiter.bind(this,25));
+// console.log(arr4);
+//
+// var greaterThanSimply = function(limiter){
+//     return function(limiter, item){
+//         return limiter <= item;
+//     }.bind(this,limiter);
+// };
+//
+// var arr5 = mapForEach(arrx2,greaterThanSimply(10));
+// console.log(arr5);
+//
+// console.log(greaterThanSimply(10)(15));
+// console.log(mapForEach(arrx2,greaterThanSimply(10)));
+//
+//
+//
 
 
 ///
