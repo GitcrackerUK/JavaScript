@@ -884,7 +884,7 @@
 //     return a * 5;
 // }
 //
-// var arrX = [2, 3, 5, 6];
+var arrX = [2, 3, 5, 6];
 //
 // var arrx2 = mapForEach(arrX, multi);
 // console.log(arrx2); // (4) [10, 15, 25, 30]
@@ -918,7 +918,65 @@
 // console.log(mapForEach(arrx2,greaterThanSimply(10)));
 //
 //
+
+
+
+
+
+//// Underscore.js
+
 //
+// var arr = {
+//     adress:'Kings Road',
+//     town:'reading',
+//     sfsd:'reading',
+//     todfwn:'reading',
+//     towfdsn:'reading',
+//     toewn:'reading',
+// }
+//
+// var arrValue = _.values(arr);
+//
+// console.log(arrValue[0]);
+//
+// console.log(_.map(arrX,function(item){ return item * 3}));
+//
+// var arr7  = _.filter([2,3,4,5,6,7,8,9,22], function(item){return item % 2 === 0});
+//
+// console.log(arr7);
+//
+//
+// function col(value){
+//     console.log(value);
+// }
+//
+// col(arr7);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ///
