@@ -775,10 +775,89 @@
 //
 //
 
+// function sayHiLater(){
+//
+//     var greeting = 'Hi';
+//      setTimeout(function(){
+//          console.log(greeting);
+//      }, 3000 );
+//
+// }
+//
+//
+// sayHiLater();
+//object
+var person = {
+    firstName: 'John',
+    lastName: 'Smith',
+    //function
+    getFullName: function() {
+        var fullname = this.firstName + ' ' + this.lastName;
+        // this. must be in a function(method) in a obj to point to this obj.
+        return fullname;
+    }
+}
+//
+// 1 .bind()
+//
+var logName = function(lang1, lang2) {
+    console.log('logged:' + this.getFullName()); // this. points global obj
+}
+var logPersonName = logName.bind(person); // .bind(person) points 'this.' to 'person' object.
+logPersonName();
+
+// 2 .bind()
+var logName = function(lang1, lang2) {
+    console.log('----------------')
+    console.log('logged:' + this.getFullName()); // this. points global obj
+    console.log('Arguments: '+ lang1 +' '+ lang2)
+}.bind(person); // .bind(person) points 'this.' to 'person' object.
+logName('English','Spanish');
 
 
 
+//3 .bind()  'Currying'
+function multi(a,b){
+    return a*b;
+}
+var multiByTwo = multi.bind(this,2); // .bind(this) sets pernament for first argument in copy of a function stored in 'multiByTwo'.
+var multiBy = multi.bind(this,2,3); // .bind(this) sets pernament for first and second argument in copy of a function stored in 'multiBy'.
 
+console.log(multiByTwo(4));
+console.log(multiBy());
+
+//
+//.call()
+//
+
+var logName = function(lang1, lang2) {
+    console.log('----------------')
+    console.log('logged:' + this.getFullName()); // this. points global obj
+    console.log('Arguments: '+ lang1 +' '+ lang2)
+}
+
+logName.call(person,'English','Spanish'); // .call(person...) points 'this.' to 'person' object.
+
+//
+// .apply()
+//
+
+logName.apply(person,['Polish','German']); // .apply(person...) points 'this.' to 'person' object. Arguments need to be in [square] brackets!!!
+
+
+(function(lang1, lang2) {
+    console.log('----------------')
+    console.log('logged:' + this.getFullName());
+    console.log('Arguments: '+ lang1 +' '+ lang2)
+}).call(person,'Russian','Lithuenian') // invokes immediately anonymous function pointing 'this' on obj. 'person' with two arguments.
+var person2  = {
+    firstName: 'Samantha',
+    lastName: 'Jones'
+}
+
+var fullNamep2 = person.getFullName.apply(person2); //Takes function 'getFullName' from person and point 'this' on person2 for 'firstName','lastName'.
+
+console.log(fullNamep2);
 
 
 
