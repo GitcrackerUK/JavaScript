@@ -952,29 +952,30 @@ var arrX = [2, 3, 5, 6];
 //
 // col(arr7);
 
+var person = {
+    firstname: 'Defult',
+    lastname: 'Defult',
+    getFullName: function() {
+        return this.firstname + ' ' + this.lastname;
+    }
+}
+console.log(person);
 
+var john = {
+    firstname: 'John',
+    lastname: 'Smith'
+}
 
+john.__proto__ = person;
 
+console.log(john.getFullName());
+ var jane = {
+     firstname:'Jane'
+ }
 
+jane.__proto__= person;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(jane.getFullName());
 
 
 
