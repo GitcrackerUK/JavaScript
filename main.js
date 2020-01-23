@@ -952,30 +952,44 @@ var arrX = [2, 3, 5, 6];
 //
 // col(arr7);
 
-var person = {
-    firstname: 'Defult',
-    lastname: 'Defult',
-    getFullName: function() {
-        return this.firstname + ' ' + this.lastname;
-    }
-}
-console.log(person);
+// var person = {
+//     firstname: 'Defult',
+//     lastname: 'Defult',
+//     getFullName: function() {
+//         return this.firstname + ' ' + this.lastname;
+//     }
+// }
+// console.log(person);
+//
+// var john = {
+//     firstname: 'John',
+//     lastname: 'Smith'
+// }
+//
+// john.__proto__ = person;
+//
+// console.log(john.getFullName());
+//  var jane = {
+//      firstname:'Jane'
+//  }
+//
+// jane.__proto__= person;
+//
+// console.log(jane.getFullName());
+//
+//
+//
 
-var john = {
-    firstname: 'John',
-    lastname: 'Smith'
-}
+var a = {};
+var b = function() {};
+var c = [];
 
-john.__proto__ = person;
 
-console.log(john.getFullName());
- var jane = {
-     firstname:'Jane'
- }
+console.log(a.__proto__.__proto__);
+console.log(b.__proto__.__proto__);
+console.log(c.__proto__.__proto__);
 
-jane.__proto__= person;
 
-console.log(jane.getFullName());
 
 
 
