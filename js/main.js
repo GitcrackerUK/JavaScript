@@ -495,7 +495,7 @@
 //
 //
 // function greet(firstname, lastname, language){
-//     firstname = firstname || "John"
+//     firstname = firstname || "john"
 //     lastname = lastname || "Smith"
 //     language = language || "English"
 //     if (arguments.lenght === 0){
@@ -550,8 +550,8 @@
 //     }
 // }
 //
-// greet('John','Smith','eng');
-// greet('John','Smith');
+// greet('john','Smith','eng');
+// greet('john','Smith');
 // greet('Hoolio','Rodriguez','es');
 //
 //
@@ -562,7 +562,7 @@
 //     greet(firstname, lastname, 'es');
 // }
 //
-// greetEnglish("John","Smith");
+// greetEnglish("john","Smith");
 // greetSpanish("Amigo","Julio");
 
 
@@ -608,7 +608,7 @@
 //
 //
 //     //Gap
-//     firstname: "John",
+//     firstname: "john",
 //     // JavaScript doesn't care about white spaces
 //     lastname: 'Smith'
 // }
@@ -648,7 +648,7 @@
 // greety('Victor');
 //
 // {
-//     name: 'John'
+//     name: 'john'
 // }
 //
 // // In this way function sits in memeory without corsing errors and is runned on the go.
@@ -770,7 +770,7 @@
 // var langEn = makeGreeting('en');
 // var langEs = makeGreeting('es');
 //
-// langEn('John','Smith');
+// langEn('john','Smith');
 // langEs('Julio','Rodrigues');
 //
 //
@@ -788,7 +788,7 @@
 // sayHiLater();
 //object
 // var person = {
-//     firstName: 'John',
+//     firstName: 'john',
 //     lastName: 'Smith',
 //     //function
 //     getFullName: function() {
@@ -952,37 +952,83 @@
 //
 // col(arr7);
 
-// var person = {
-//     firstname: 'Defult',
-//     lastname: 'Defult',
-//     getFullName: function() {
-//         return this.firstname + ' ' + this.lastname;
-//     }
-// }
-// console.log(person);
-//
-// var john = {
-//     firstname: 'John',
-//     lastname: 'Smith'
-// }
-//
-// john.__proto__ = person;
-//
-// console.log(john.getFullName());
-//  var jane = {
-//      firstname:'Jane'
-//  }
-//
-// jane.__proto__= person;
-//
-// console.log(jane.getFullName());
-//
-//
-//
+var person = {
+    firstname: 'Defult',
+    lastname: 'Defult',
+    getFullName: function() {
+        return this.firstname + ' ' + this.lastname;
+    }
+}
+console.log(person);
 
-// var a = {};
-// var b = function() {};
-// var c = [];
+var john = {
+    firstname: 'john',
+    lastname: 'Smith'
+}
+
+john.__proto__ = person;
+
+console.log(john.getFullName());
+ var jane = {
+     firstname:'Jane'
+ }
+
+jane.__proto__= person;
+
+console.log(jane.getFullName());
+
+for(var prop in john){
+    if (john.hasOwnProperty(prop)){
+    console.log(prop + ':' + john[prop]);
+}
+}
+
+
+
+
+var jane = {
+    address: '111 mian str',
+    getFullName: function(){
+        return this.lastname + ', '+ this.firstname;
+    }
+}
+var jim = {
+    getFirstName: function(){
+        return this.firstname;
+    }
+}
+
+
+_.extend(john,jane,jim);
+
+console.log(john);
+
+
+var johnfullName = john.getFullName();
+var johnFirstName = john.getFirstName();
+
+console.log(johnfullName);
+console.log(johnFirstName);
+
+var createAssigner = function(keysFunc, defaults) {
+  return function(obj) {
+    var length = arguments.length;
+    if (defaults) obj = Object(obj);
+    if (length < 2 || obj == null) return obj;
+    for (var index = 1; index < length; index++) {
+      var source = arguments[index],
+          keys = keysFunc(source),
+          l = keys.length;
+      for (var i = 0; i < l; i++) {
+        var key = keys[i];
+        if (!defaults || obj[key] === void 0) obj[key] = source[key];
+      }
+    }
+    return obj;
+  };
+};
+
+
 
 
 

@@ -1408,7 +1408,7 @@
     return '\\' + escapes[match];
   };
 
-  // JavaScript micro-templating, similar to John Resig's implementation.
+  // JavaScript micro-templating, similar to john Resig's implementation.
   // Underscore templating handles arbitrary delimiters, preserves whitespace,
   // and correctly escapes quotes within interpolated code.
   // NB: `oldSettings` only exists for backwards compatibility.

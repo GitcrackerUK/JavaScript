@@ -32,6 +32,8 @@ window.addEventListener("load", function() {
     var keys = document.getElementById('keys');
     var values = document.getElementById('values');
 
+    pick.innerHTML = _.pick()
+
 
 
 
