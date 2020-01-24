@@ -1010,15 +1010,26 @@ var johnFirstName = john.getFirstName();
 console.log(johnfullName);
 console.log(johnFirstName);
 
+console.log(Object(john) + ' <-----');
+
+
+// !!!!
+
+_.extend = createAssigner(_.allKeys);
+
 var createAssigner = function(keysFunc, defaults) {
   return function(obj) {
-    var length = arguments.length;
+    var length = arguments.length; //  checking lenght of arguments and assighn it  to var lenght
+
+
     if (defaults) obj = Object(obj);
     if (length < 2 || obj == null) return obj;
+
     for (var index = 1; index < length; index++) {
       var source = arguments[index],
           keys = keysFunc(source),
           l = keys.length;
+
       for (var i = 0; i < l; i++) {
         var key = keys[i];
         if (!defaults || obj[key] === void 0) obj[key] = source[key];
@@ -1028,10 +1039,16 @@ var createAssigner = function(keysFunc, defaults) {
   };
 };
 
+_.allKeys = function(obj) {
+  if (!_.isObject(obj)) return [];
+  var keys = [];
+  for (var key in obj) keys.push(key);
+  // Ahem, IE < 9.
+  if (hasEnumBug) collectNonEnumProps(obj, keys);
+  return keys;
+};
 
-
-
-
+// !!!!
 
 
 
