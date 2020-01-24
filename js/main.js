@@ -1019,7 +1019,7 @@ _.extend = createAssigner(_.allKeys);
 
 var createAssigner = function(keysFunc, defaults) {
   return function(obj) {
-    var length = arguments.length; //  checking lenght of arguments and assighn it  to var lenght
+    var length = arguments.length; //  checking lenght of arguments and assighn result to var lenght
 
 
     if (defaults) obj = Object(obj);
@@ -1047,6 +1047,12 @@ _.allKeys = function(obj) {
   if (hasEnumBug) collectNonEnumProps(obj, keys);
   return keys;
 };
+
+_.isObject = function(obj) {
+  var type = typeof obj;
+  return type === 'function' || type === 'object' && !!obj;
+};
+
 
 // !!!!
 
