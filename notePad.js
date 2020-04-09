@@ -28,3 +28,13 @@ findNumbers();
 console.log(numbersFound);
 console.log(numbersFound.length);
 console.log(result);
+
+//=========================================================================================================================
+// if conditional 
+// 1) 
+let age = prompt("What is you age?");
+let accesAlowed = age > 18 ? true : false;
+accesAlowed ? alert("You are over 18") : alert("You are not allowed, sorry.")
+//2) Shortened "ternary"
+if(age>18){accesAlowed = true;}else{ accesAlowed = false;}
+if(accesAlowed){alert("You are over 18")}else{alert("You are not allowed, sorry.")}
