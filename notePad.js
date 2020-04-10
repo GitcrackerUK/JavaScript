@@ -25,6 +25,29 @@ function findNumbers(){
    }
 }
 findNumbers();
+=========================================================================================================================
+fibonacci up to 4M, sum of even numbers
+var fibonaci = [1,2];
+var max = 4000000;
+for(i=0;fibonaci[i]<max;i++){
+  var current = fibonaci[i];
+  var next = fibonaci[i+1];
+  if(current+next<max){
+    fibonaci.push(current+next);
+  }else{
+    break
+  }
+}
+cl(fibonaci);
+var result = 0
+for(i=0;i<fibonaci.length;i++){
+  if(fibonaci[i]%2==0){
+    result += fibonaci[i]
+  }
+}
+cl(result)
+
+
 console.log(numbersFound);
 console.log(numbersFound.length);
 console.log(result);
